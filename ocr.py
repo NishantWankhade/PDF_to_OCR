@@ -2,7 +2,7 @@ import requests
 import json
 import base64 
   
-  
+# Word wise image needs to be sent in OCR/infer endpoint
 with open("2.png", "rb") as image2string: 
     converted_bytes = base64.b64encode(image2string.read()) 
     converted_string = converted_bytes.decode()
