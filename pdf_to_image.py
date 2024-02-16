@@ -6,6 +6,3 @@ def convert_to_images(pdf_path, image_path, book_name):
     for i in range(len(images)):
         images[i].save(f"{image_path}/{book_name}/images/" + str(i) +'.jpg', 'JPEG')
 
-
-if __name__ == "__main__":
-    print("Pdf_to_image")

@@ -4,7 +4,7 @@ payload = {'model': 'doctr'}
 files = [
 ('images', (
  '1.jpg',
- open('1.png', 'rb'),
+ open('example/2.png', 'rb'),
  'image/jpeg'
  )
 )
