@@ -6,7 +6,7 @@ Project for PDF file to its OCR text output using Bhashini APIs, supporting mult
 
 * Install Anaconda [Download for Windows](https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Windows-x86_64.exe)
 
-* Creating an Virtual Conda Environment
+* Open Anaconda Prompt for creating an Virtual Conda Environment
 
 ```bash
 conda create -n pdftoocr python=3.9
