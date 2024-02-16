@@ -3,23 +3,14 @@ import requests
 import json
 import os
 from file_paths import retrive_file_paths
+from pdf_to_image import convert_to_images
 
 
 def pdf_to_text(pdf_path, output_text_file, image_dir, book_name):
 
-    os.makedirs(f"{image_dir}/{book_name}/images", exist_ok=True)
     os.makedirs(f"{image_dir}/{book_name}/text", exist_ok=True)
 
-
-    print("Converting PDF to images...")
-    images = convert_from_path(pdf_path, poppler_path="poppler-23.11.0/Library/bin")
-
-
-    print("Saving images...")
-    for i, image in enumerate(images):
-        image.save(f"{image_dir}/{book_name}/images/{i}.jpg", 'JPEG')
-        print(f"Image {i + 1} saved.")
-
+    convert_to_images(pdf_path, image_dir, book_name) # call Convert PDF to images function
 
     print("Performing OCR on images...")
     url = "http://bhasha.iiit.ac.in/pageocr/api"
