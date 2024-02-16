@@ -2,9 +2,10 @@ import requests
 import json
 import base64 
 
-with open("example/2.png", "rb") as image2string: 
+with open(r"D:\PDF_to_OCR\11.Bharatiya-Sahityashastra_djvu\images\3.jpg", "rb") as image2string:
     converted_bytes = base64.b64encode(image2string.read()) 
     converted_string = converted_bytes.decode()
+
 
 
 url = "https://ilocr.iiit.ac.in/ocr/infer"

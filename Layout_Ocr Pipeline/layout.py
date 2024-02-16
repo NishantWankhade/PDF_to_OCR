@@ -4,7 +4,7 @@ payload = {'model': 'doctr'}
 files = [
 ('images', (
  '1.jpg',
- open('example/2.png', 'rb'),
+ open(r'D:\PDF_to_OCR\example\1.png', 'rb'),
  'image/jpeg'
  )
 )
