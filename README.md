@@ -2,7 +2,7 @@
 Project for PDF file to its OCR text output using Bhashini APIs, supporting multilingual detections.
 
 
-## Setup and Installation
+## Setup and Installation - Bhashini API 
 
 * Install Anaconda [Download for Windows](https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Windows-x86_64.exe)
 
