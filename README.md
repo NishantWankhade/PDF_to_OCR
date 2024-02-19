@@ -1,19 +1,17 @@
 # PDF_to_OCR
-Project for PDF file to its OCR text output using Bhashini APIs, supporting multilingual detections.
 
+Project for PDF file to its OCR text output, supporting multilingual detections using Surya Modules.
 
-## Setup and Installation
+## Setup and Installation - Surya Pipeline
 
-* Install Anaconda [Download for Windows](https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Windows-x86_64.exe)
-
-* Open Anaconda Prompt for creating an Virtual Conda Environment
+- Install Surya Python module
 
 ```bash
-conda create -n pdftoocr python=3.9
+pip install surya-ocr
 ```
 
-* Installing python module dependencies 
+- Requires Pytorch to be installed
 
 ```bash
-pip install -r requirements.txt
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
