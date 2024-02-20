@@ -1,16 +1,16 @@
 # PDF_to_OCR
 
-Project for PDF file to its OCR text output, supporting multilingual detections using Surya Modules.
+Project for PDF file to its OCR text output, supporting multilingual detections using [Surya](https://github.com/VikParuchuri/surya) Modules.
 
 ## Setup and Installation - Surya Pipeline
 
-- Create Virtual Python environment 
+- Create Virtual Python environment
 
-```bash 
-python -m venv surya_venv 
+```bash
+python -m venv surya_venv
 ```
 
-- Activate the venv 
+- Activate the venv
 
 ```bash
 source surya_venv/Scripts/activate
