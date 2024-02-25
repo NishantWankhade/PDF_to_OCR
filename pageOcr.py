@@ -70,7 +70,9 @@ def pdf_to_text(output_path):
         second_page_path = f"{output_path}/text/{second_page}.txt"
         third_page_path = f"{output_path}/text/{third_page}.txt"
         
-        if(file_path != first_page_path or file_path != second_page_path or file_path != third_page_path):
+        if(file_path == first_page_path or file_path == second_page_path or file_path == third_page_path):
+            continue 
+        else :
             os.remove(file_path)
     
     for i in range(len(images)):
@@ -80,7 +82,9 @@ def pdf_to_text(output_path):
         second_image_path = f"{output_path}/images/{second_page}.jpg"
         third_image_path = f"{output_path}/images/{third_page}.jpg"
         
-        if(image_path != first_image_path or image_path != second_image_path or image_path != third_image_path):
+        if(image_path == first_image_path or image_path == second_image_path or image_path == third_image_path):
+            continue 
+        else :
             os.remove(image_path)
 
 
@@ -98,7 +102,10 @@ def super_function(pdf_path):
 
 if __name__ == "__main__" :
     
-    pdf_file_paths = retrive_file_paths(2,"hindi_pdfs/pdfs")
+    # Testing on this book pdf
+    # super_function("/home1/multilingual/ArchiveOrg/data/hindi_pdfs/pdfs/001BhriguSanhitaAstrologyHindi/001-Bhrigu-Sanhita-Astrology-Hindi.pdf")
+    
+    pdf_file_paths = retrive_file_paths(2,"/home1/multilingual/ArchiveOrg/data/hindi_pdfs/pdfs")
     print(pdf_file_paths)
     
     start = time.perf_counter()
@@ -115,11 +122,13 @@ if __name__ == "__main__" :
                 data = future.result()
             except Exception as exc:
                 # print(f'{item} generated an exception: {exc}')
-                with open("exception_files.txt", 'a', encoding='utf-8') as f:
+                with open("/home1/multilingual/ArchiveOrg/scripts/Pdf_To_Ocr/exception_files.txt", 'a', encoding='utf-8') as f:
+                    
                     f.write(f'{item} generated an exception: {exc} \n') 
             else:
                 # print(f'{item} downloaded successfully')
-                with open("ocred_files.txt", 'a', encoding='utf-8') as f:
+                with open("/home1/multilingual/ArchiveOrg/scripts/Pdf_To_Ocr/ocred_files.txt", 'a', encoding='utf-8') as f:
+                    
                     f.write(f'{item} \n') 
     
     
