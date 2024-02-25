@@ -1,18 +1,21 @@
 import os
-def retrive_file_paths(number_of_files, root_dir):
+def retrive_file_paths(number, root_dir):
     file_paths_list = []
-    count = 0
     for subdir, dirs, files in os.walk(root_dir):
         if not dirs:
             identifier = subdir.split("/")[-1]
             for file in files:
-                if file.endswith(".pdf") and count < number_of_files:
+                if file.endswith(".pdf"):
                     file_path = os.path.join(subdir, file)
                     file_paths_list.append(file_path)
+                
+                if(len(file_paths_list) > number):
+                    return file_paths_list
+
     print(file_paths_list)
     return file_paths_list
 
-# retrive_file_paths(10,"hindi_pdf/pdfs")
+retrive_file_paths(3,"hindi_pdf/pdfs")
 # this code gives the foll output
 
 # ['hindi_pdf/pdfs/0-0_20230331/#काँग्रेस_के_कुकर्म  का पीढ़ी दर पीढ़ी एक वफादार के0एम0जोसेफ.pdf', 
